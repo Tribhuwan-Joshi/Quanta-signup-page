@@ -1,53 +1,182 @@
-body,
-html {
-  background-color: rgb(234, 220, 220);
-  height: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css?family=Abel');
+body {
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
 }
+
+
+/* left - container */
 
 .left-container {
-  height: 100vh;
-  width: 30vw;
-  background-image: url(./Images/bg.jpg);
-  background-size: 30vw 100vh;
-  color: white;
-  
-}
-.banner-img {
-  width: 50px;
-}
-.left-container .banner {
-  background-color: rgba(56, 56, 56, 0.5);
-  text-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  height: 10vh;
-  
-  position: relative;
-  top: 10%;
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 100;
-  display: flex;
-  justify-content: center;
+    height: 100vh;
+    width: 30vw;
+    background-image: url(./Images/bg.jpg);
+    background-size: 30vw 100vh;
+    color: white;
+    flex-shrink: 0;
+    flex-basis: auto;
 }
 
-.left-container .bottom-text{
-margin-top:86vh;
-text-align: center;
-font-family: monospace;
+.banner-img {
+    width: 50px;
 }
+
+.left-container .banner {
+    background-color: rgba(56, 56, 56, 0.5);
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 10vh;
+    position: relative;
+    top: 10%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 100;
+    display: flex;
+    flex-shrink: 1;
+    justify-content: center;
+}
+
+.left-container .bottom-text {
+    margin-top: 86vh;
+    text-align: center;
+    font-family: monospace;
+}
+
 .bottom-text a {
     font-style: italic;
     color: white;
 }
-.bottom-text a:hover{
+
+.bottom-text a:hover {
     text-decoration: none;
-    
 }
+
 .banner-text {
-  letter-spacing: 3px;
-  text-align: center;
-  font-size: 40px;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+/* right container */
+
+.right-container {
+    box-sizing: border-box;
+    flex-basis: 0%;
+    flex-grow: 1;
+}
+
+.right-container .header {
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: min(200px, 10%);
+    padding-bottom: 15px;
+    background-color: rgb(226, 226, 226);
+}
+
+.top-text {
+    max-width: 70ch;
+    font-size: larger;
+    font-weight: 200px;
+    font-family: 'Abel';
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+
+/* form */
+
+.form {
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: min(200px, 10%);
+    padding-bottom: 15px;
+    background-color: rgb(255, 255, 255);
+}
+
+.form h3 {
+    margin-top: 0;
+    padding: 0;
+    font-family: 'Abel';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form label {
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgb(66, 66, 66);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 550;
+}
+
+.form input {
+    outline: none;
+    border: 1px solid #d6d6d7;
+    height: 24px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Abel';
+    padding: 2px 0px 2px 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form input:focus {
+    box-shadow: 1px 1px 5px 1px rgb(188, 180, 180);
+    border: 1px solid rgba(239, 184, 22, 255);
+}
+
+.form:focus-within {
+    box-shadow: 2px 2px 5px 3px rgb(227, 227, 227);
+}
+
+
+/* bottom */
+
+.bottom {
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: min(200px, 10%);
+    padding-bottom: 15px;
+    background-color: rgb(255, 250, 250);
+}
+
+.create {
+    border-radius: 8px;
+    outline: none;
+    background-color: rgb(240, 198, 71);
+    padding: 7px 10px;
+    margin-bottom: 25px;
+    width: 180px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: monospace;
+    cursor: pointer;
+    font-family: Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.create:hover {
+    background-color: rgb(253, 218, 114);
+}
+
+.already {
+    font-family: sans-serif;
+}
+
+.already a {
+    color: #fd3633;
+    text-decoration: none;
+}
+
+.already a:hover {
+    text-decoration: underline;
 }
