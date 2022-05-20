@@ -16,7 +16,7 @@ body {
   background-image: url(./Images/bg.jpg);
 
   background-size: 30vw 100vh;
-  
+
   color: white;
   flex-shrink: 0;
   flex-basis: auto;
@@ -89,45 +89,45 @@ body {
   word-spacing: 2px;
   letter-spacing: 1px;
 }
-.top-text a{
-    text-decoration: none;
+.top-text a {
+  text-decoration: none;
 }
-.top-text a:hover{
-    text-decoration: underline blueviolet;
+.top-text a:hover {
+  text-decoration: underline blueviolet;
 }
 /* form */
 
 .form {
   padding-top: 25px;
   padding-left: 100px;
-height: 240px;
+  height: 240px;
   padding-bottom: 25px;
   margin-bottom: 4px;
-  background-color: rgb(215, 213, 213);
- 
+  background-color: rgb(238, 234, 234);
 }
-.form:hover , .form:focus-within{ box-shadow: 1px 1px 5px 1px rgb(159, 153, 153);}
+.form:hover,
+.form:focus-within {
+  box-shadow: 1px 1px 5px 1px rgb(159, 153, 153);
+}
 .form .info {
-display: flex;
+  display: flex;
 
-gap:60px;
+  gap: 60px;
 }
-
 
 .form h3 {
   margin-top: 0;
   padding: 0;
   font-family: "Abel";
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
 }
 .form .group {
-
- margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form label {
-  font-size: 12px;
+  font-size: 11px;
   font-family: sans-serif;
   color: rgb(66, 66, 66);
   letter-spacing: 1px;
@@ -143,20 +143,34 @@ gap:60px;
   background-color: rgb(244, 238, 238);
   height: 28px;
   width: 220px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   font-family: sans-serif;
   padding: 2px 0px 2px 10px;
   border-radius: 5px;
   box-sizing: border-box;
-
 }
 
-.form input:focus {
-  box-shadow: 2px 2px 3px 2px rgb(195, 193, 193);;
-  
+.form input:focus:not([type="password"]) {
+  box-shadow: 2px 2px 3px 2px rgb(195, 193, 193);
+  border: 1px solid cyan;
 }
 
+.form input[type="password"]:invalid {
+  border: 1px solid red;
+}
+
+.form input[type="password"]:valid {
+  border: 1px solid rgb(9, 188, 12);
+}
+.form .passwordMatch {
+  color: red;
+  font-family: sans-serif;
+
+  font-size: 14px;
+  margin-top: -12px;
+  padding-top: 0px;
+}
 /* bottom */
 
 .bottom {
@@ -192,7 +206,7 @@ gap:60px;
 }
 
 .already a {
-  color: #fd3633;
+  color: rgb(71, 88, 240);
   text-decoration: none;
 }
 

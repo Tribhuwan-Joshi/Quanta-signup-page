@@ -8,7 +8,7 @@
     <link rel="icon" href="./Images/Quanta.png">
     <title>Sign up</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+
 
 <body>
     <div class="left-container">
@@ -38,15 +38,16 @@
             <form action="#" method="post">
                 <div class="info">
                     <div class="right-info">
-                <div class="group"> <label for="fname">FIRST NAME</label><br>
-                    <input type="text" name="fname" id="fname">
+                <div class="group"> <label for="fname" title="required">FIRST NAME *</label ><br>
+                    <input type="text" name="fname" id="fname" > 
                 </div>
-                <div class="group"> <label for="email">EMAIL</label> <br>
-                    <input type="email" name="email" id="email">
+                <div class="group"> <label for="email" title="required">EMAIL *</label> <br>
+                    <input type="email" name="email" id="email" required>
                 </div>
-                 <div class="group"> <label for="password">PASSWORD</label><br>
-                    <input type="password" name="password" id="password">
+                 <div class="group"> <label for="password" title="required">PASSWORD *</label><br>
+                    <input type="password" name="password" id="password" class="error" pattern="[\w\d\s]{8,}" required minlength="8" maxlength="20">
                 </div>
+                <p class="passwordMatch">* Passwords do not match</p>
                 </div>
                 <div class="left-info">
                 <div class="group"><label for="lname">LAST NAME</label><br>
@@ -58,8 +59,8 @@
                     <input type="tel" name="tel" id="tel">
                 </div>
                
-                <div class="group"><label for="confirm">CONFIRM PASSWORD</label><br>
-                    <input type="password" name="confirm" id="confirm">
+                <div class="group"><label for="confirm" title="required">CONFIRM PASSWORD *</label><br>
+                    <input type="password" name="confirm" id="confirm" pattern="[\w\d\s]{8,}" required class="error" minlength="8" maxlength="20">
                 </div>
                 </div>
                 </div>
@@ -68,7 +69,7 @@
 
         </div>
         <div class="bottom">
-            <button class="create" type="button">Create Account</button>
+            <button class="create" type="submit">Create Account</button>
             <div class="already">Already have an account?
                 <a href=""> <strong>Log in</strong> </a>
             </div>
@@ -77,6 +78,24 @@
         </div>
 
     </div>
+        <script>
+const match = document.querySelector('.passwordMatch');
+const passwd = document.querySelector('#password');
+const confirm = document.querySelector('#confirm');
+
+const arr = [passwd,confirm];
+arr.forEach((obj)=>obj.addEventListener('input',check));
+
+function check(){
+    if(confirm.value==passwd.value){
+        match.textContent="";
+    }
+    else{
+        match.textContent="* Passwords do not match";
+    }
+}
+        </script>
+</head>
 </body>
 
 </html>
